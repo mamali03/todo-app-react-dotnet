@@ -32,6 +32,42 @@
             "related": ".pdb"
           }
         }
+      },
+      "Todo.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Todo.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Todo.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Todo.Application.dll": {}
+        }
+      },
+      "Todo.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Todo.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Todo.Domain.dll": {}
+        }
+      },
+      "Todo.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Todo.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Todo.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Todo.Persistence.dll": {}
+        }
       }
     }
   },
@@ -68,11 +104,28 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "Todo.Application/1.0.0": {
+      "type": "project",
+      "path": "../Todo.Application/Todo.Application.csproj",
+      "msbuildProject": "../Todo.Application/Todo.Application.csproj"
+    },
+    "Todo.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Todo.Domain/Todo.Domain.csproj",
+      "msbuildProject": "../Todo.Domain/Todo.Domain.csproj"
+    },
+    "Todo.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../Todo.Persistence/Todo.Persistence.csproj",
+      "msbuildProject": "../Todo.Persistence/Todo.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.OpenApi >= 10.0.4"
+      "Microsoft.AspNetCore.OpenApi >= 10.0.4",
+      "Todo.Application >= 1.0.0",
+      "Todo.Persistence >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -99,7 +152,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/workspaces/todo-app-react-dotnet/backend/Todo.Application/Todo.Application.csproj": {
+              "projectPath": "/workspaces/todo-app-react-dotnet/backend/Todo.Application/Todo.Application.csproj"
+            },
+            "/workspaces/todo-app-react-dotnet/backend/Todo.Persistence/Todo.Persistence.csproj": {
+              "projectPath": "/workspaces/todo-app-react-dotnet/backend/Todo.Persistence/Todo.Persistence.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

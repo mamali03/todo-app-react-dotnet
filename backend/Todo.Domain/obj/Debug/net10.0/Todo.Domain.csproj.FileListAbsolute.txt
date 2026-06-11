@@ -1,0 +1,12 @@
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.AssemblyInfoInputs.cache
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.AssemblyInfo.cs
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.csproj.CoreCompileInputs.cache
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.sourcelink.json
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/bin/Debug/net10.0/Todo.Domain.deps.json
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/bin/Debug/net10.0/Todo.Domain.dll
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/bin/Debug/net10.0/Todo.Domain.pdb
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.dll
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/refint/Todo.Domain.dll
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/Todo.Domain.pdb
+/workspaces/todo-app-react-dotnet/backend/Todo.Domain/obj/Debug/net10.0/ref/Todo.Domain.dll
