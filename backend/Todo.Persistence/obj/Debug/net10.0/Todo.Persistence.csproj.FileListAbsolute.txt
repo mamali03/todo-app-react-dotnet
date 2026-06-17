@@ -14,3 +14,5 @@
 /workspaces/todo-app-react-dotnet/backend/Todo.Persistence/obj/Debug/net10.0/refint/Todo.Persistence.dll
 /workspaces/todo-app-react-dotnet/backend/Todo.Persistence/obj/Debug/net10.0/Todo.Persistence.pdb
 /workspaces/todo-app-react-dotnet/backend/Todo.Persistence/obj/Debug/net10.0/ref/Todo.Persistence.dll
+/workspaces/todo-app-react-dotnet/backend/Todo.Persistence/bin/Debug/net10.0/Todo.Persistence.runtimeconfig.json
+/workspaces/todo-app-react-dotnet/backend/Todo.Persistence/obj/Debug/net10.0/Todo.Persistence.genruntimeconfig.cache

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bNXKGqCoKgA=",
+  "dgSpecHash": "UxKO67xlA0Q=",
   "success": true,
   "projectFilePath": "/workspaces/todo-app-react-dotnet/backend/Todo.Application/Todo.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.9/microsoft.extensions.dependencyinjection.abstractions.10.0.9.nupkg.sha512"
+  ],
   "logs": []
 }
