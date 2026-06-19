@@ -1,9 +1,9 @@
-namespace Todo.Domain.Entities;
+namespace Todo.Application.DTOs;
 
-public class TodoItem
+public class TodoDetailDto
 {
     public Guid Id {get; set;}
     public string Title {get; set;} = string.Empty;
     public bool IsCompleted {get; set;}
-    public DateTime CreatedAt {get; set;} = DateTime.UtcNow;
+    public DateTime CreatedAt {get; set;}
 }

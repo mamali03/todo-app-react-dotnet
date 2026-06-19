@@ -19,7 +19,7 @@ public class CreateTodoHandler
             Id = Guid.NewGuid(),
             Title = command.Title,
             IsCompleted = false,
-            CreateAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow
         };
         await _todoRepository.CreateAsync(todo);
     }
