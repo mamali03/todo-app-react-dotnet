@@ -8,4 +8,5 @@ public interface ITodoRepository
     Task<TodoItem?> GetByIdAsync(Guid id);
     Task CreateAsync(TodoItem todo);
     Task<bool> DeleteAsync(Guid id);
+    Task<bool> UpdateAsync(TodoItem todo);
 }

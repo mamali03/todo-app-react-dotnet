@@ -5,7 +5,7 @@ namespace Todo.Application.Queries.GetTodoById;
 
 public class GetTodoByIdHandler
 {
-    public readonly ITodoRepository _todoRepository;
+    private readonly ITodoRepository _todoRepository;
 
     public GetTodoByIdHandler(ITodoRepository todoRepository)
     {

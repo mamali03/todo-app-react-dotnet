@@ -6,7 +6,7 @@ namespace Todo.Application.Queries.GetTodos;
 
 public class GetTodosHandler
 {
-    public readonly ITodoRepository _todoRepository;
+    private readonly ITodoRepository _todoRepository;
     public GetTodosHandler(ITodoRepository todoRepository)
     {
         _todoRepository = todoRepository;

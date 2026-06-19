@@ -4,7 +4,7 @@ namespace Todo.Application.Commands.DeleteTodo;
 
 public class DeleteTodoHandler
 {
-    public readonly ITodoRepository _todoRepository;
+    private readonly ITodoRepository _todoRepository;
 
     public DeleteTodoHandler(ITodoRepository todoRepository)
     {
