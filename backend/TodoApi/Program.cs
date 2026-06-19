@@ -4,6 +4,7 @@ using Todo.Application.Queries.GetTodos;
 using TodoApi.Contracts;
 using Todo.Application.Commands.CreateTodo;
 using Todo.Application.Queries.GetTodoById;
+using Todo.Application.Commands.DeleteTodo;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +51,17 @@ app.MapGet("/api/todos/{id:guid}", async (Guid id, GetTodoByIdHandler handler)=>
     var todo = await handler.Handle(query);
     
     return todo is null ? Results.NotFound() : Results.Ok(todo);
+});
+
+app.MapDelete("/api/todos/{id:guid}", async(Guid id, DeleteTodoHandler handler) => {
+
+var command = new DeleteTodoCommand{
+Id = id
+};
+var deleted = await handler.Handle(command);
+
+return deleted ? Results.NoContent() : Results.NotFound();
+
 });
 
 app.Run();

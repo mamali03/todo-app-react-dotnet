@@ -29,14 +29,15 @@ public class TodoRepository: ITodoRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(Guid id)
+    public async Task<bool> DeleteAsync(Guid id)
     {
         var todo = await _dbContext.Todos.FindAsync(id);
         if(todo is null)
         {
-            return;
+            return false;
         }
         _dbContext.Todos.Remove(todo);
         await _dbContext.SaveChangesAsync();
+        return true;
     }
 }

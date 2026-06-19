@@ -7,5 +7,5 @@ public interface ITodoRepository
     Task<List<TodoItem>> GetAllAsync();
     Task<TodoItem?> GetByIdAsync(Guid id);
     Task CreateAsync(TodoItem todo);
-    Task DeleteAsync(Guid id);
+    Task<bool> DeleteAsync(Guid id);
 }
