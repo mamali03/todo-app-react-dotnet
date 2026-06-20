@@ -49,13 +49,13 @@ app.MapPost("/api/todos", async (CreateTodoRequest request,CreateTodoHandler han
     {
         Title = request.Title
     };
-    await handler.Handle(command);
-    return Results.Ok("Todo Created");
+    var id = await handler.Handle(command);
+    return Results.Created($"/api/todos/{id}",null);
 })
 .WithName("CreateTodo")
 .WithSummary("Create a new todo")
 .WithDescription("Creates a new todo item")
-.Produces(StatusCodes.Status200OK);
+.Produces(StatusCodes.Status201Created);
 
 app.MapGet("/api/todos/{id:guid}", async (Guid id, GetTodoByIdHandler handler)=>{
 

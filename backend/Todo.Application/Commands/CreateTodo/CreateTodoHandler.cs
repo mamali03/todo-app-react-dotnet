@@ -12,7 +12,7 @@ public class CreateTodoHandler
         _todoRepository = todoRepository;
     }
 
-    public async Task Handle(CreateTodoCommand command)
+    public async Task<Guid> Handle(CreateTodoCommand command)
     {
         var todo = new TodoItem()
         {
@@ -22,6 +22,8 @@ public class CreateTodoHandler
             CreatedAt = DateTime.UtcNow
         };
         await _todoRepository.CreateAsync(todo);
+
+        return todo.Id;
     }
 
 }
