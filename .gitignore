@@ -2,3 +2,15 @@
 *.db
 *.db-shm
 *.db-wal
+
+# .NET Build Output
+bin/
+obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# React / Node
+node_modules/
+dist/
