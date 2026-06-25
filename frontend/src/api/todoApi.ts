@@ -42,3 +42,21 @@ export async function createTodo(title:string):Promise<void>{
         throw new Error("Failed to delete todo");
     }
 }
+
+export async function updateTodo(todo:Todo):Promise<void> {
+    const response = await fetch(`${API_BASE_URL}/api/todos/${todo.id}`,{
+        method:"PUT",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            title:todo.title,
+            isCompleted: todo.isCompleted
+        })
+    });
+
+    if(!response.ok)
+    {
+        throw new Error("Failed to update todo");
+    }
+}

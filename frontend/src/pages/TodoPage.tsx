@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTodos } from "../hooks/useTodos"
-import { createTodo, deleteTodo } from "../api/todoApi";
+import { createTodo, deleteTodo, updateTodo } from "../api/todoApi";
+import type { Todo } from "../types/Todo";
 
 export function TodoPage()
 {
@@ -25,6 +26,16 @@ export function TodoPage()
       await reload();
     }
 
+    async function handleToggleTodo(todo:Todo,isCompleted:boolean)
+    {
+      const updatedTodo = {
+        ...todo,isCompleted
+      }
+
+      await updateTodo(updatedTodo);
+      await reload();
+    }
+
     if(loading)
     {
       return <h1>Loading...</h1>
@@ -43,6 +54,7 @@ export function TodoPage()
           {
             todos.map((todo)=>(
               <li key={todo.id}>
+                <input type="checkbox" checked={todo.isCompleted} onChange={(e)=>{handleToggleTodo(todo,e.target.checked)}} />
                 {todo.title} 
                 <button onClick={()=>handleDeleteTodo(todo.id)}>Delete</button>
               </li>
