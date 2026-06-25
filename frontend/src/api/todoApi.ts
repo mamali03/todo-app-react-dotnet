@@ -31,3 +31,14 @@ export async function createTodo(title:string):Promise<void>{
         throw new Error("Failed to create todo");
     }
 }
+
+ export async function deleteTodo(id:string):Promise<void>
+{
+    const response = await fetch(`${API_BASE_URL}/api/todos/${id}`,{
+        method:"DELETE"
+    });
+    if(!response.ok)
+    {
+        throw new Error("Failed to delete todo");
+    }
+}
